@@ -22,7 +22,7 @@ int main() {
 
     int i = 1;
     OPERACAO operacao;
-    while (i<length) {
+    while (i<length || input[i] != '\0') {
 
         if (input[i] == '+') {
             operacao=SOMA;
@@ -45,6 +45,7 @@ int main() {
             number *= -1;
         }
         total += number;
-        i++;
     }
+
+    printf("%d", total);
 }
